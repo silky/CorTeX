@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `Service` struct in crate `cortex`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, Service">
+
+    <title>cortex::data::Service - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='../index.html'>cortex</a>::<wbr><a href='index.html'>data</a></p><script>window.sidebarCurrent = {name: 'Service', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>cortex</a>::<wbr><a href='index.html'>data</a>::<wbr><a class='struct' href=''>Service</a></span><span class='out-of-band'><span id='render-detail'>
+            <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                [<span class='inner'>&#x2212;</span>]
+            </a>
+        </span><a id='src-804' class='srclink' href='../../src/cortex/data.rs.html#493-511' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct Service {
+    pub id: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>&gt;,
+    pub name: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>,
+    pub version: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.f32.html'>f32</a>,
+    pub inputformat: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>,
+    pub outputformat: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>,
+    pub inputconverter: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;,
+    pub complex: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>,
+}</pre><div class='docblock'><p>A CorTeX processing Service</p>
+</div><h2 class='fields'>Fields</h2>
+<table><tr class='stab '>
+                                  <td id='structfield.id'><code>id</code></td><td><div class='docblock'><p>optional id (None for mock / yet-to-be-inserted rows)</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.name'><code>name</code></td><td><div class='docblock'><p>a human-readable name for this service</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.version'><code>version</code></td><td><div class='docblock'><p>a floating-point number to mark the current version (e.g. 0.01)</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.inputformat'><code>inputformat</code></td><td><div class='docblock'><p>the expected input format for this service (e.g. tex)</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.outputformat'><code>outputformat</code></td><td><div class='docblock'><p>the produced output format by this service (e.g. html)</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.inputconverter'><code>inputconverter</code></td><td><div class='docblock'><p>prerequisite input conversion service, if any</p>
+</div></td></tr><tr class='stab '>
+                                  <td id='structfield.complex'><code>complex</code></td><td><div class='docblock'><p>is this service requiring more than the main textual content of a document?
+mark &quot;true&quot; if unsure</p>
+</div></td></tr></table><h2 id='methods'>Methods</h2><h3 class='impl'><code>impl <a class='struct' href='../../cortex/data/struct.Service.html' title='cortex::data::Service'>Service</a></code></h3><div class='impl-items'><h4 id='method.from_name' class='method'><code>fn <a href='#method.from_name' class='fnname'>from_name</a>(connection: &amp;<a class='struct' href='../../postgres/struct.Connection.html' title='postgres::Connection'>Connection</a>, name: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;<a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;Self&gt;, <a class='enum' href='../../postgres/error/enum.Error.html' title='postgres::error::Error'>Error</a>&gt;</code></h4>
+<div class='docblock'><p>Select a service from the Task store via its human-readable name. Requires a postgres <code>Connection</code>.</p>
+</div><h4 id='method.to_hash' class='method'><code>fn <a href='#method.to_hash' class='fnname'>to_hash</a>(&amp;self) -&gt; <a class='struct' href='https://doc.rust-lang.org/nightly/std/collections/hash/map/struct.HashMap.html' title='std::collections::hash::map::HashMap'>HashMap</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>, <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;</code></h4>
+<div class='docblock'><p>Returns a hash representation of the <code>Service</code>, usually for frontend reports</p>
+</div></div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='struct' href='../../cortex/data/struct.Service.html' title='cortex::data::Service'>Service</a></code></h3><div class='impl-items'><h4 id='method.fmt' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#method.fmt' class='fnname'>fmt</a>(&amp;self, f: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
+</div><h3 class='impl'><code>impl <a class='trait' href='../../cortex/data/trait.CortexORM.html' title='cortex::data::CortexORM'>CortexORM</a> for <a class='struct' href='../../cortex/data/struct.Service.html' title='cortex::data::Service'>Service</a></code></h3><div class='impl-items'><h4 id='method.get_id' class='method'><code>fn <a href='../../cortex/data/trait.CortexORM.html#method.get_id' class='fnname'>get_id</a>(&amp;self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>&gt;</code></h4>
+<h4 id='method.select_by_id' class='method'><code>fn <a href='../../cortex/data/trait.CortexORM.html#method.select_by_id' class='fnname'>select_by_id</a>&lt;'a&gt;(&amp;'a self, connection: &amp;'a <a class='struct' href='../../postgres/struct.Connection.html' title='postgres::Connection'>Connection</a>) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;<a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../cortex/data/struct.Service.html' title='cortex::data::Service'>Service</a>&gt;, <a class='enum' href='../../postgres/error/enum.Error.html' title='postgres::error::Error'>Error</a>&gt;</code></h4>
+<h4 id='method.select_by_key' class='method'><code>fn <a href='../../cortex/data/trait.CortexORM.html#method.select_by_key' class='fnname'>select_by_key</a>&lt;'a&gt;(&amp;'a self, connection: &amp;'a <a class='struct' href='../../postgres/struct.Connection.html' title='postgres::Connection'>Connection</a>) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;<a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../cortex/data/struct.Service.html' title='cortex::data::Service'>Service</a>&gt;, <a class='enum' href='../../postgres/error/enum.Error.html' title='postgres::error::Error'>Error</a>&gt;</code></h4>
+<h4 id='method.insert' class='method'><code>fn <a href='../../cortex/data/trait.CortexORM.html#method.insert' class='fnname'>insert</a>(&amp;self, connection: &amp;<a class='struct' href='../../postgres/struct.Connection.html' title='postgres::Connection'>Connection</a>) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>, <a class='enum' href='../../postgres/error/enum.Error.html' title='postgres::error::Error'>Error</a>&gt;</code></h4>
+<h4 id='method.delete' class='method'><code>fn <a href='../../cortex/data/trait.CortexORM.html#method.delete' class='fnname'>delete</a>(&amp;self, connection: &amp;<a class='struct' href='../../postgres/struct.Connection.html' title='postgres::Connection'>Connection</a>) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>, <a class='enum' href='../../postgres/error/enum.Error.html' title='postgres::error::Error'>Error</a>&gt;</code></h4>
+<h4 id='method.from_row' class='method'><code>fn <a href='../../cortex/data/trait.CortexORM.html#method.from_row' class='fnname'>from_row</a>(row: <a class='struct' href='../../postgres/rows/struct.Row.html' title='postgres::rows::Row'>Row</a>) -&gt; Self</code></h4>
+</div><h3 id='derived_implementations'>Derived Implementations </h3><h3 class='impl'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html' title='core::clone::Clone'>Clone</a> for <a class='struct' href='../../cortex/data/struct.Service.html' title='cortex::data::Service'>Service</a></code></h3><div class='impl-items'><h4 id='method.clone' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone' class='fnname'>clone</a>(&amp;self) -&gt; <a class='struct' href='../../cortex/data/struct.Service.html' title='cortex::data::Service'>Service</a></code></h4>
+<h4 id='method.clone_from' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from' class='fnname'>clone_from</a>(&amp;mut self, source: &amp;Self)</code></h4>
+</div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "cortex";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+initSidebarItems({"enum":[["ArchiveEntryFiletype",""],["ArchiveEntryIOType",""],["ArchiveError",""],["ArchiveExtractFlag",""],["ArchiveFilter",""],["ArchiveFormat",""]],"struct":[["AllocationError",""],["ArchiveEntryReader",""],["Reader",""],["Writer",""],["WriterToDisk",""]]});

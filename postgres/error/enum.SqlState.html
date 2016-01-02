@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `SqlState` enum in crate `postgres`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, SqlState">
+
+    <title>postgres::error::SqlState - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='../index.html'>postgres</a>::<wbr><a href='index.html'>error</a></p><script>window.sidebarCurrent = {name: 'SqlState', ty: 'enum', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content enum">
+<h1 class='fqn'><span class='in-band'>Enum <a href='../index.html'>postgres</a>::<wbr><a href='index.html'>error</a>::<wbr><a class='enum' href=''>SqlState</a></span><span class='out-of-band'><span id='render-detail'>
+            <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                [<span class='inner'>&#x2212;</span>]
+            </a>
+        </span><a id='src-1018' class='srclink' href='../../src/postgres///home/travis/build/dginev/CorTeX/target/debug/build/postgres-b11411a7b19a8b54/out/sqlstate.rs.html#3-470' title='goto source code'>[src]</a></span></h1>
+<pre class='rust enum'>pub enum SqlState {
+    SuccessfulCompletion,
+    Warning,
+    DynamicResultSetsReturned,
+    ImplicitZeroBitPadding,
+    NullValueEliminatedInSetFunction,
+    PrivilegeNotGranted,
+    PrivilegeNotRevoked,
+    StringDataRightTruncationWarning,
+    DeprecatedFeature,
+    NoData,
+    NoAdditionalDynamicResultSetsReturned,
+    SqlStatementNotYetComplete,
+    ConnectionException,
+    ConnectionDoesNotExist,
+    ConnectionFailure,
+    SqlclientUnableToEstablishSqlconnection,
+    SqlserverRejectedEstablishmentOfSqlconnection,
+    TransactionResolutionUnknown,
+    ProtocolViolation,
+    TriggeredActionException,
+    FeatureNotSupported,
+    InvalidTransactionInitiation,
+    LocatorException,
+    InvalidLocatorException,
+    InvalidGrantor,
+    InvalidGrantOperation,
+    InvalidRoleSpecification,
+    DiagnosticsException,
+    StackedDiagnosticsAccessedWithoutActiveHandler,
+    CaseNotFound,
+    CardinalityViolation,
+    DataException,
+    ArraySubscriptError,
+    CharacterNotInRepertoire,
+    DatetimeFieldOverflow,
+    DivisionByZero,
+    ErrorInAssignment,
+    EscapeCharacterConflict,
+    IndicatorOverflow,
+    IntervalFieldOverflow,
+    InvalidArgumentForLogarithm,
+    InvalidArgumentForNtileFunction,
+    InvalidArgumentForNthValueFunction,
+    InvalidArgumentForPowerFunction,
+    InvalidArgumentForWidthBucketFunction,
+    InvalidCharacterValueForCast,
+    InvalidDatetimeFormat,
+    InvalidEscapeCharacter,
+    InvalidEscapeOctet,
+    InvalidEscapeSequence,
+    NonstandardUseOfEscapeCharacter,
+    InvalidIndicatorParameterValue,
+    InvalidParameterValue,
+    InvalidRegularExpression,
+    InvalidRowCountInLimitClause,
+    InvalidRowCountInResultOffsetClause,
+    InvalidTimeZoneDisplacementValue,
+    InvalidUseOfEscapeCharacter,
+    MostSpecificTypeMismatch,
+    NullValueNotAllowedData,
+    NullValueNoIndicatorParameter,
+    NumericValueOutOfRange,
+    StringDataLengthMismatch,
+    StringDataRightTruncationException,
+    SubstringError,
+    TrimError,
+    UnterminatedCString,
+    ZeroLengthCharacterString,
+    FloatingPointException,
+    InvalidTextRepresentation,
+    InvalidBinaryRepresentation,
+    BadCopyFileFormat,
+    UntranslatableCharacter,
+    NotAnXmlDocument,
+    InvalidXmlDocument,
+    InvalidXmlContent,
+    InvalidXmlComment,
+    InvalidXmlProcessingInstruction,
+    IntegrityConstraintViolation,
+    RestrictViolation,
+    NotNullViolation,
+    ForeignKeyViolation,
+    UniqueViolation,
+    CheckViolation,
+    ExclusionViolation,
+    InvalidCursorState,
+    InvalidTransactionState,
+    ActiveSqlTransaction,
+    BranchTransactionAlreadyActive,
+    HeldCursorRequiresSameIsolationLevel,
+    InappropriateAccessModeForBranchTransaction,
+    InappropriateIsolationLevelForBranchTransaction,
+    NoActiveSqlTransactionForBranchTransaction,
+    ReadOnlySqlTransaction,
+    SchemaAndDataStatementMixingNotSupported,
+    NoActiveSqlTransaction,
+    InFailedSqlTransaction,
+    InvalidSqlStatementName,
+    TriggeredDataChangeViolation,
+    InvalidAuthorizationSpecification,
+    InvalidPassword,
+    DependentPrivilegeDescriptorsStillExist,
+    DependentObjectsStillExist,
+    InvalidTransactionTermination,
+    SqlRoutineException,
+    FunctionExecutedNoReturnStatement,
+    ModifyingSqlDataNotPermittedSqlRoutine,
+    ProhibitedSqlStatementAttemptedSqlRoutine,
+    ReadingSqlDataNotPermittedSqlRoutine,
+    InvalidCursorName,
+    ExternalRoutineException,
+    ContainingSqlNotPermitted,
+    ModifyingSqlDataNotPermittedExternalRoutine,
+    ProhibitedSqlStatementAttemptedExternalRoutine,
+    ReadingSqlDataNotPermittedExternalRoutine,
+    ExternalRoutineInvocationException,
+    InvalidSqlstateReturned,
+    NullValueNotAllowedExternalRoutine,
+    TriggerProtocolViolated,
+    SrfProtocolViolated,
+    SavepointException,
+    InvalidSavepointException,
+    InvalidCatalogName,
+    InvalidSchemaName,
+    TransactionRollback,
+    TransactionIntegrityConstraintViolation,
+    SerializationFailure,
+    StatementCompletionUnknown,
+    DeadlockDetected,
+    SyntaxErrorOrAccessRuleViolation,
+    SyntaxError,
+    InsufficientPrivilege,
+    CannotCoerce,
+    GroupingError,
+    WindowingError,
+    InvalidRecursion,
+    InvalidForeignKey,
+    InvalidName,
+    NameTooLong,
+    ReservedName,
+    DatatypeMismatch,
+    IndeterminateDatatype,
+    CollationMismatch,
+    IndeterminateCollation,
+    WrongObjectType,
+    UndefinedColumn,
+    UndefinedFunction,
+    UndefinedTable,
+    UndefinedParameter,
+    UndefinedObject,
+    DuplicateColumn,
+    DuplicateCursor,
+    DuplicateDatabase,
+    DuplicateFunction,
+    DuplicatePreparedStatement,
+    DuplicateSchema,
+    DuplicateTable,
+    DuplicateAliaas,
+    DuplicateObject,
+    AmbiguousColumn,
+    AmbiguousFunction,
+    AmbiguousParameter,
+    AmbiguousAlias,
+    InvalidColumnReference,
+    InvalidColumnDefinition,
+    InvalidCursorDefinition,
+    InvalidDatabaseDefinition,
+    InvalidFunctionDefinition,
+    InvalidPreparedStatementDefinition,
+    InvalidSchemaDefinition,
+    InvalidTableDefinition,
+    InvalidObjectDefinition,
+    WithCheckOptionViolation,
+    InsufficientResources,
+    DiskFull,
+    OutOfMemory,
+    TooManyConnections,
+    ConfigurationLimitExceeded,
+    ProgramLimitExceeded,
+    StatementTooComplex,
+    TooManyColumns,
+    TooManyArguments,
+    ObjectNotInPrerequisiteState,
+    ObjectInUse,
+    CantChangeRuntimeParam,
+    LockNotAvailable,
+    OperatorIntervention,
+    QueryCanceled,
+    AdminShutdown,
+    CrashShutdown,
+    CannotConnectNow,
+    DatabaseDropped,
+    SystemError,
+    IoError,
+    UndefinedFile,
+    DuplicateFile,
+    ConfigFileError,
+    LockFileExists,
+    FdwError,
+    FdwColumnNameNotFound,
+    FdwDynamicParameterValueNeeded,
+    FdwFunctionSequenceError,
+    FdwInconsistentDescriptorInformation,
+    FdwInvalidAttributeValue,
+    FdwInvalidColumnName,
+    FdwInvalidColumnNumber,
+    FdwInvalidDataType,
+    FdwInvalidDataTypeDescriptors,
+    FdwInvalidDescriptorFieldIdentifier,
+    FdwInvalidHandle,
+    FdwInvalidOptionIndex,
+    FdwInvalidOptionName,
+    FdwInvalidStringLengthOrBufferLength,
+    FdwInvalidStringFormat,
+    FdwInvalidUseOfNullPointer,
+    FdwTooManyHandles,
+    FdwOutOfMemory,
+    FdwNoSchemas,
+    FdwOptionNameNotFound,
+    FdwReplyHandle,
+    FdwSchemaNotFound,
+    FdwTableNotFound,
+    FdwUnableToCreateExcecution,
+    FdwUnableToCreateReply,
+    FdwUnableToEstablishConnection,
+    PlpgsqlError,
+    RaiseException,
+    NoDataFound,
+    TooManyRows,
+    InternalError,
+    DataCorrupted,
+    IndexCorrupted,
+    Unknown(<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>),
+}</pre><div class='docblock'><p>SQLSTATE error codes</p>
+</div><h2 class='variants'>Variants</h2>
+<table><tr><td id='variant.SuccessfulCompletion'><code>SuccessfulCompletion</code></td><td><div class='docblock'><p><code>00000</code></p>
+</div></td></tr><tr><td id='variant.Warning'><code>Warning</code></td><td><div class='docblock'><p><code>01000</code></p>
+</div></td></tr><tr><td id='variant.DynamicResultSetsReturned'><code>DynamicResultSetsReturned</code></td><td><div class='docblock'><p><code>0100C</code></p>
+</div></td></tr><tr><td id='variant.ImplicitZeroBitPadding'><code>ImplicitZeroBitPadding</code></td><td><div class='docblock'><p><code>01008</code></p>
+</div></td></tr><tr><td id='variant.NullValueEliminatedInSetFunction'><code>NullValueEliminatedInSetFunction</code></td><td><div class='docblock'><p><code>01003</code></p>
+</div></td></tr><tr><td id='variant.PrivilegeNotGranted'><code>PrivilegeNotGranted</code></td><td><div class='docblock'><p><code>01007</code></p>
+</div></td></tr><tr><td id='variant.PrivilegeNotRevoked'><code>PrivilegeNotRevoked</code></td><td><div class='docblock'><p><code>01006</code></p>
+</div></td></tr><tr><td id='variant.StringDataRightTruncationWarning'><code>StringDataRightTruncationWarning</code></td><td><div class='docblock'><p><code>01004</code></p>
+</div></td></tr><tr><td id='variant.DeprecatedFeature'><code>DeprecatedFeature</code></td><td><div class='docblock'><p><code>01P01</code></p>
+</div></td></tr><tr><td id='variant.NoData'><code>NoData</code></td><td><div class='docblock'><p><code>02000</code></p>
+</div></td></tr><tr><td id='variant.NoAdditionalDynamicResultSetsReturned'><code>NoAdditionalDynamicResultSetsReturned</code></td><td><div class='docblock'><p><code>02001</code></p>
+</div></td></tr><tr><td id='variant.SqlStatementNotYetComplete'><code>SqlStatementNotYetComplete</code></td><td><div class='docblock'><p><code>03000</code></p>
+</div></td></tr><tr><td id='variant.ConnectionException'><code>ConnectionException</code></td><td><div class='docblock'><p><code>08000</code></p>
+</div></td></tr><tr><td id='variant.ConnectionDoesNotExist'><code>ConnectionDoesNotExist</code></td><td><div class='docblock'><p><code>08003</code></p>
+</div></td></tr><tr><td id='variant.ConnectionFailure'><code>ConnectionFailure</code></td><td><div class='docblock'><p><code>08006</code></p>
+</div></td></tr><tr><td id='variant.SqlclientUnableToEstablishSqlconnection'><code>SqlclientUnableToEstablishSqlconnection</code></td><td><div class='docblock'><p><code>08001</code></p>
+</div></td></tr><tr><td id='variant.SqlserverRejectedEstablishmentOfSqlconnection'><code>SqlserverRejectedEstablishmentOfSqlconnection</code></td><td><div class='docblock'><p><code>08004</code></p>
+</div></td></tr><tr><td id='variant.TransactionResolutionUnknown'><code>TransactionResolutionUnknown</code></td><td><div class='docblock'><p><code>08007</code></p>
+</div></td></tr><tr><td id='variant.ProtocolViolation'><code>ProtocolViolation</code></td><td><div class='docblock'><p><code>08P01</code></p>
+</div></td></tr><tr><td id='variant.TriggeredActionException'><code>TriggeredActionException</code></td><td><div class='docblock'><p><code>09000</code></p>
+</div></td></tr><tr><td id='variant.FeatureNotSupported'><code>FeatureNotSupported</code></td><td><div class='docblock'><p><code>0A000</code></p>
+</div></td></tr><tr><td id='variant.InvalidTransactionInitiation'><code>InvalidTransactionInitiation</code></td><td><div class='docblock'><p><code>0B000</code></p>
+</div></td></tr><tr><td id='variant.LocatorException'><code>LocatorException</code></td><td><div class='docblock'><p><code>0F000</code></p>
+</div></td></tr><tr><td id='variant.InvalidLocatorException'><code>InvalidLocatorException</code></td><td><div class='docblock'><p><code>0F001</code></p>
+</div></td></tr><tr><td id='variant.InvalidGrantor'><code>InvalidGrantor</code></td><td><div class='docblock'><p><code>0L000</code></p>
+</div></td></tr><tr><td id='variant.InvalidGrantOperation'><code>InvalidGrantOperation</code></td><td><div class='docblock'><p><code>0LP01</code></p>
+</div></td></tr><tr><td id='variant.InvalidRoleSpecification'><code>InvalidRoleSpecification</code></td><td><div class='docblock'><p><code>0P000</code></p>
+</div></td></tr><tr><td id='variant.DiagnosticsException'><code>DiagnosticsException</code></td><td><div class='docblock'><p><code>0Z000</code></p>
+</div></td></tr><tr><td id='variant.StackedDiagnosticsAccessedWithoutActiveHandler'><code>StackedDiagnosticsAccessedWithoutActiveHandler</code></td><td><div class='docblock'><p><code>0Z002</code></p>
+</div></td></tr><tr><td id='variant.CaseNotFound'><code>CaseNotFound</code></td><td><div class='docblock'><p><code>20000</code></p>
+</div></td></tr><tr><td id='variant.CardinalityViolation'><code>CardinalityViolation</code></td><td><div class='docblock'><p><code>21000</code></p>
+</div></td></tr><tr><td id='variant.DataException'><code>DataException</code></td><td><div class='docblock'><p><code>22000</code></p>
+</div></td></tr><tr><td id='variant.ArraySubscriptError'><code>ArraySubscriptError</code></td><td><div class='docblock'><p><code>2202E</code></p>
+</div></td></tr><tr><td id='variant.CharacterNotInRepertoire'><code>CharacterNotInRepertoire</code></td><td><div class='docblock'><p><code>22021</code></p>
+</div></td></tr><tr><td id='variant.DatetimeFieldOverflow'><code>DatetimeFieldOverflow</code></td><td><div class='docblock'><p><code>22008</code></p>
+</div></td></tr><tr><td id='variant.DivisionByZero'><code>DivisionByZero</code></td><td><div class='docblock'><p><code>22012</code></p>
+</div></td></tr><tr><td id='variant.ErrorInAssignment'><code>ErrorInAssignment</code></td><td><div class='docblock'><p><code>22005</code></p>
+</div></td></tr><tr><td id='variant.EscapeCharacterConflict'><code>EscapeCharacterConflict</code></td><td><div class='docblock'><p><code>2200B</code></p>
+</div></td></tr><tr><td id='variant.IndicatorOverflow'><code>IndicatorOverflow</code></td><td><div class='docblock'><p><code>22022</code></p>
+</div></td></tr><tr><td id='variant.IntervalFieldOverflow'><code>IntervalFieldOverflow</code></td><td><div class='docblock'><p><code>22015</code></p>
+</div></td></tr><tr><td id='variant.InvalidArgumentForLogarithm'><code>InvalidArgumentForLogarithm</code></td><td><div class='docblock'><p><code>2201E</code></p>
+</div></td></tr><tr><td id='variant.InvalidArgumentForNtileFunction'><code>InvalidArgumentForNtileFunction</code></td><td><div class='docblock'><p><code>22014</code></p>
+</div></td></tr><tr><td id='variant.InvalidArgumentForNthValueFunction'><code>InvalidArgumentForNthValueFunction</code></td><td><div class='docblock'><p><code>22016</code></p>
+</div></td></tr><tr><td id='variant.InvalidArgumentForPowerFunction'><code>InvalidArgumentForPowerFunction</code></td><td><div class='docblock'><p><code>2201F</code></p>
+</div></td></tr><tr><td id='variant.InvalidArgumentForWidthBucketFunction'><code>InvalidArgumentForWidthBucketFunction</code></td><td><div class='docblock'><p><code>2201G</code></p>
+</div></td></tr><tr><td id='variant.InvalidCharacterValueForCast'><code>InvalidCharacterValueForCast</code></td><td><div class='docblock'><p><code>22018</code></p>
+</div></td></tr><tr><td id='variant.InvalidDatetimeFormat'><code>InvalidDatetimeFormat</code></td><td><div class='docblock'><p><code>22007</code></p>
+</div></td></tr><tr><td id='variant.InvalidEscapeCharacter'><code>InvalidEscapeCharacter</code></td><td><div class='docblock'><p><code>22019</code></p>
+</div></td></tr><tr><td id='variant.InvalidEscapeOctet'><code>InvalidEscapeOctet</code></td><td><div class='docblock'><p><code>2200D</code></p>
+</div></td></tr><tr><td id='variant.InvalidEscapeSequence'><code>InvalidEscapeSequence</code></td><td><div class='docblock'><p><code>22025</code></p>
+</div></td></tr><tr><td id='variant.NonstandardUseOfEscapeCharacter'><code>NonstandardUseOfEscapeCharacter</code></td><td><div class='docblock'><p><code>22P06</code></p>
+</div></td></tr><tr><td id='variant.InvalidIndicatorParameterValue'><code>InvalidIndicatorParameterValue</code></td><td><div class='docblock'><p><code>22010</code></p>
+</div></td></tr><tr><td id='variant.InvalidParameterValue'><code>InvalidParameterValue</code></td><td><div class='docblock'><p><code>22023</code></p>
+</div></td></tr><tr><td id='variant.InvalidRegularExpression'><code>InvalidRegularExpression</code></td><td><div class='docblock'><p><code>2201B</code></p>
+</div></td></tr><tr><td id='variant.InvalidRowCountInLimitClause'><code>InvalidRowCountInLimitClause</code></td><td><div class='docblock'><p><code>2201W</code></p>
+</div></td></tr><tr><td id='variant.InvalidRowCountInResultOffsetClause'><code>InvalidRowCountInResultOffsetClause</code></td><td><div class='docblock'><p><code>2201X</code></p>
+</div></td></tr><tr><td id='variant.InvalidTimeZoneDisplacementValue'><code>InvalidTimeZoneDisplacementValue</code></td><td><div class='docblock'><p><code>22009</code></p>
+</div></td></tr><tr><td id='variant.InvalidUseOfEscapeCharacter'><code>InvalidUseOfEscapeCharacter</code></td><td><div class='docblock'><p><code>2200C</code></p>
+</div></td></tr><tr><td id='variant.MostSpecificTypeMismatch'><code>MostSpecificTypeMismatch</code></td><td><div class='docblock'><p><code>2200G</code></p>
+</div></td></tr><tr><td id='variant.NullValueNotAllowedData'><code>NullValueNotAllowedData</code></td><td><div class='docblock'><p><code>22004</code></p>
+</div></td></tr><tr><td id='variant.NullValueNoIndicatorParameter'><code>NullValueNoIndicatorParameter</code></td><td><div class='docblock'><p><code>22002</code></p>
+</div></td></tr><tr><td id='variant.NumericValueOutOfRange'><code>NumericValueOutOfRange</code></td><td><div class='docblock'><p><code>22003</code></p>
+</div></td></tr><tr><td id='variant.StringDataLengthMismatch'><code>StringDataLengthMismatch</code></td><td><div class='docblock'><p><code>22026</code></p>
+</div></td></tr><tr><td id='variant.StringDataRightTruncationException'><code>StringDataRightTruncationException</code></td><td><div class='docblock'><p><code>22001</code></p>
+</div></td></tr><tr><td id='variant.SubstringError'><code>SubstringError</code></td><td><div class='docblock'><p><code>22011</code></p>
+</div></td></tr><tr><td id='variant.TrimError'><code>TrimError</code></td><td><div class='docblock'><p><code>22027</code></p>
+</div></td></tr><tr><td id='variant.UnterminatedCString'><code>UnterminatedCString</code></td><td><div class='docblock'><p><code>22024</code></p>
+</div></td></tr><tr><td id='variant.ZeroLengthCharacterString'><code>ZeroLengthCharacterString</code></td><td><div class='docblock'><p><code>2200F</code></p>
+</div></td></tr><tr><td id='variant.FloatingPointException'><code>FloatingPointException</code></td><td><div class='docblock'><p><code>22P01</code></p>
+</div></td></tr><tr><td id='variant.InvalidTextRepresentation'><code>InvalidTextRepresentation</code></td><td><div class='docblock'><p><code>22P02</code></p>
+</div></td></tr><tr><td id='variant.InvalidBinaryRepresentation'><code>InvalidBinaryRepresentation</code></td><td><div class='docblock'><p><code>22P03</code></p>
+</div></td></tr><tr><td id='variant.BadCopyFileFormat'><code>BadCopyFileFormat</code></td><td><div class='docblock'><p><code>22P04</code></p>
+</div></td></tr><tr><td id='variant.UntranslatableCharacter'><code>UntranslatableCharacter</code></td><td><div class='docblock'><p><code>22P05</code></p>
+</div></td></tr><tr><td id='variant.NotAnXmlDocument'><code>NotAnXmlDocument</code></td><td><div class='docblock'><p><code>2200L</code></p>
+</div></td></tr><tr><td id='variant.InvalidXmlDocument'><code>InvalidXmlDocument</code></td><td><div class='docblock'><p><code>2200M</code></p>
+</div></td></tr><tr><td id='variant.InvalidXmlContent'><code>InvalidXmlContent</code></td><td><div class='docblock'><p><code>2200N</code></p>
+</div></td></tr><tr><td id='variant.InvalidXmlComment'><code>InvalidXmlComment</code></td><td><div class='docblock'><p><code>2200S</code></p>
+</div></td></tr><tr><td id='variant.InvalidXmlProcessingInstruction'><code>InvalidXmlProcessingInstruction</code></td><td><div class='docblock'><p><code>2200T</code></p>
+</div></td></tr><tr><td id='variant.IntegrityConstraintViolation'><code>IntegrityConstraintViolation</code></td><td><div class='docblock'><p><code>23000</code></p>
+</div></td></tr><tr><td id='variant.RestrictViolation'><code>RestrictViolation</code></td><td><div class='docblock'><p><code>23001</code></p>
+</div></td></tr><tr><td id='variant.NotNullViolation'><code>NotNullViolation</code></td><td><div class='docblock'><p><code>23502</code></p>
+</div></td></tr><tr><td id='variant.ForeignKeyViolation'><code>ForeignKeyViolation</code></td><td><div class='docblock'><p><code>23503</code></p>
+</div></td></tr><tr><td id='variant.UniqueViolation'><code>UniqueViolation</code></td><td><div class='docblock'><p><code>23505</code></p>
+</div></td></tr><tr><td id='variant.CheckViolation'><code>CheckViolation</code></td><td><div class='docblock'><p><code>23514</code></p>
+</div></td></tr><tr><td id='variant.ExclusionViolation'><code>ExclusionViolation</code></td><td><div class='docblock'><p><code>32P01</code></p>
+</div></td></tr><tr><td id='variant.InvalidCursorState'><code>InvalidCursorState</code></td><td><div class='docblock'><p><code>24000</code></p>
+</div></td></tr><tr><td id='variant.InvalidTransactionState'><code>InvalidTransactionState</code></td><td><div class='docblock'><p><code>25000</code></p>
+</div></td></tr><tr><td id='variant.ActiveSqlTransaction'><code>ActiveSqlTransaction</code></td><td><div class='docblock'><p><code>25001</code></p>
+</div></td></tr><tr><td id='variant.BranchTransactionAlreadyActive'><code>BranchTransactionAlreadyActive</code></td><td><div class='docblock'><p><code>25002</code></p>
+</div></td></tr><tr><td id='variant.HeldCursorRequiresSameIsolationLevel'><code>HeldCursorRequiresSameIsolationLevel</code></td><td><div class='docblock'><p><code>25008</code></p>
+</div></td></tr><tr><td id='variant.InappropriateAccessModeForBranchTransaction'><code>InappropriateAccessModeForBranchTransaction</code></td><td><div class='docblock'><p><code>25003</code></p>
+</div></td></tr><tr><td id='variant.InappropriateIsolationLevelForBranchTransaction'><code>InappropriateIsolationLevelForBranchTransaction</code></td><td><div class='docblock'><p><code>25004</code></p>
+</div></td></tr><tr><td id='variant.NoActiveSqlTransactionForBranchTransaction'><code>NoActiveSqlTransactionForBranchTransaction</code></td><td><div class='docblock'><p><code>25005</code></p>
+</div></td></tr><tr><td id='variant.ReadOnlySqlTransaction'><code>ReadOnlySqlTransaction</code></td><td><div class='docblock'><p><code>25006</code></p>
+</div></td></tr><tr><td id='variant.SchemaAndDataStatementMixingNotSupported'><code>SchemaAndDataStatementMixingNotSupported</code></td><td><div class='docblock'><p><code>25007</code></p>
+</div></td></tr><tr><td id='variant.NoActiveSqlTransaction'><code>NoActiveSqlTransaction</code></td><td><div class='docblock'><p><code>25P01</code></p>
+</div></td></tr><tr><td id='variant.InFailedSqlTransaction'><code>InFailedSqlTransaction</code></td><td><div class='docblock'><p><code>25P02</code></p>
+</div></td></tr><tr><td id='variant.InvalidSqlStatementName'><code>InvalidSqlStatementName</code></td><td><div class='docblock'><p><code>26000</code></p>
+</div></td></tr><tr><td id='variant.TriggeredDataChangeViolation'><code>TriggeredDataChangeViolation</code></td><td><div class='docblock'><p><code>27000</code></p>
+</div></td></tr><tr><td id='variant.InvalidAuthorizationSpecification'><code>InvalidAuthorizationSpecification</code></td><td><div class='docblock'><p><code>28000</code></p>
+</div></td></tr><tr><td id='variant.InvalidPassword'><code>InvalidPassword</code></td><td><div class='docblock'><p><code>28P01</code></p>
+</div></td></tr><tr><td id='variant.DependentPrivilegeDescriptorsStillExist'><code>DependentPrivilegeDescriptorsStillExist</code></td><td><div class='docblock'><p><code>2B000</code></p>
+</div></td></tr><tr><td id='variant.DependentObjectsStillExist'><code>DependentObjectsStillExist</code></td><td><div class='docblock'><p><code>2BP01</code></p>
+</div></td></tr><tr><td id='variant.InvalidTransactionTermination'><code>InvalidTransactionTermination</code></td><td><div class='docblock'><p><code>2D000</code></p>
+</div></td></tr><tr><td id='variant.SqlRoutineException'><code>SqlRoutineException</code></td><td><div class='docblock'><p><code>2F000</code></p>
+</div></td></tr><tr><td id='variant.FunctionExecutedNoReturnStatement'><code>FunctionExecutedNoReturnStatement</code></td><td><div class='docblock'><p><code>2F005</code></p>
+</div></td></tr><tr><td id='variant.ModifyingSqlDataNotPermittedSqlRoutine'><code>ModifyingSqlDataNotPermittedSqlRoutine</code></td><td><div class='docblock'><p><code>2F002</code></p>
+</div></td></tr><tr><td id='variant.ProhibitedSqlStatementAttemptedSqlRoutine'><code>ProhibitedSqlStatementAttemptedSqlRoutine</code></td><td><div class='docblock'><p><code>2F003</code></p>
+</div></td></tr><tr><td id='variant.ReadingSqlDataNotPermittedSqlRoutine'><code>ReadingSqlDataNotPermittedSqlRoutine</code></td><td><div class='docblock'><p><code>2F004</code></p>
+</div></td></tr><tr><td id='variant.InvalidCursorName'><code>InvalidCursorName</code></td><td><div class='docblock'><p><code>34000</code></p>
+</div></td></tr><tr><td id='variant.ExternalRoutineException'><code>ExternalRoutineException</code></td><td><div class='docblock'><p><code>38000</code></p>
+</div></td></tr><tr><td id='variant.ContainingSqlNotPermitted'><code>ContainingSqlNotPermitted</code></td><td><div class='docblock'><p><code>38001</code></p>
+</div></td></tr><tr><td id='variant.ModifyingSqlDataNotPermittedExternalRoutine'><code>ModifyingSqlDataNotPermittedExternalRoutine</code></td><td><div class='docblock'><p><code>38002</code></p>
+</div></td></tr><tr><td id='variant.ProhibitedSqlStatementAttemptedExternalRoutine'><code>ProhibitedSqlStatementAttemptedExternalRoutine</code></td><td><div class='docblock'><p><code>38003</code></p>
+</div></td></tr><tr><td id='variant.ReadingSqlDataNotPermittedExternalRoutine'><code>ReadingSqlDataNotPermittedExternalRoutine</code></td><td><div class='docblock'><p><code>38004</code></p>
+</div></td></tr><tr><td id='variant.ExternalRoutineInvocationException'><code>ExternalRoutineInvocationException</code></td><td><div class='docblock'><p><code>39000</code></p>
+</div></td></tr><tr><td id='variant.InvalidSqlstateReturned'><code>InvalidSqlstateReturned</code></td><td><div class='docblock'><p><code>39001</code></p>
+</div></td></tr><tr><td id='variant.NullValueNotAllowedExternalRoutine'><code>NullValueNotAllowedExternalRoutine</code></td><td><div class='docblock'><p><code>39004</code></p>
+</div></td></tr><tr><td id='variant.TriggerProtocolViolated'><code>TriggerProtocolViolated</code></td><td><div class='docblock'><p><code>39P01</code></p>
+</div></td></tr><tr><td id='variant.SrfProtocolViolated'><code>SrfProtocolViolated</code></td><td><div class='docblock'><p><code>39P02</code></p>
+</div></td></tr><tr><td id='variant.SavepointException'><code>SavepointException</code></td><td><div class='docblock'><p><code>3B000</code></p>
+</div></td></tr><tr><td id='variant.InvalidSavepointException'><code>InvalidSavepointException</code></td><td><div class='docblock'><p><code>3B001</code></p>
+</div></td></tr><tr><td id='variant.InvalidCatalogName'><code>InvalidCatalogName</code></td><td><div class='docblock'><p><code>3D000</code></p>
+</div></td></tr><tr><td id='variant.InvalidSchemaName'><code>InvalidSchemaName</code></td><td><div class='docblock'><p><code>3F000</code></p>
+</div></td></tr><tr><td id='variant.TransactionRollback'><code>TransactionRollback</code></td><td><div class='docblock'><p><code>40000</code></p>
+</div></td></tr><tr><td id='variant.TransactionIntegrityConstraintViolation'><code>TransactionIntegrityConstraintViolation</code></td><td><div class='docblock'><p><code>40002</code></p>
+</div></td></tr><tr><td id='variant.SerializationFailure'><code>SerializationFailure</code></td><td><div class='docblock'><p><code>40001</code></p>
+</div></td></tr><tr><td id='variant.StatementCompletionUnknown'><code>StatementCompletionUnknown</code></td><td><div class='docblock'><p><code>40003</code></p>
+</div></td></tr><tr><td id='variant.DeadlockDetected'><code>DeadlockDetected</code></td><td><div class='docblock'><p><code>40P01</code></p>
+</div></td></tr><tr><td id='variant.SyntaxErrorOrAccessRuleViolation'><code>SyntaxErrorOrAccessRuleViolation</code></td><td><div class='docblock'><p><code>42000</code></p>
+</div></td></tr><tr><td id='variant.SyntaxError'><code>SyntaxError</code></td><td><div class='docblock'><p><code>42601</code></p>
+</div></td></tr><tr><td id='variant.InsufficientPrivilege'><code>InsufficientPrivilege</code></td><td><div class='docblock'><p><code>42501</code></p>
+</div></td></tr><tr><td id='variant.CannotCoerce'><code>CannotCoerce</code></td><td><div class='docblock'><p><code>42846</code></p>
+</div></td></tr><tr><td id='variant.GroupingError'><code>GroupingError</code></td><td><div class='docblock'><p><code>42803</code></p>
+</div></td></tr><tr><td id='variant.WindowingError'><code>WindowingError</code></td><td><div class='docblock'><p><code>42P20</code></p>
+</div></td></tr><tr><td id='variant.InvalidRecursion'><code>InvalidRecursion</code></td><td><div class='docblock'><p><code>42P19</code></p>
+</div></td></tr><tr><td id='variant.InvalidForeignKey'><code>InvalidForeignKey</code></td><td><div class='docblock'><p><code>42830</code></p>
+</div></td></tr><tr><td id='variant.InvalidName'><code>InvalidName</code></td><td><div class='docblock'><p><code>42602</code></p>
+</div></td></tr><tr><td id='variant.NameTooLong'><code>NameTooLong</code></td><td><div class='docblock'><p><code>42622</code></p>
+</div></td></tr><tr><td id='variant.ReservedName'><code>ReservedName</code></td><td><div class='docblock'><p><code>42939</code></p>
+</div></td></tr><tr><td id='variant.DatatypeMismatch'><code>DatatypeMismatch</code></td><td><div class='docblock'><p><code>42804</code></p>
+</div></td></tr><tr><td id='variant.IndeterminateDatatype'><code>IndeterminateDatatype</code></td><td><div class='docblock'><p><code>42P18</code></p>
+</div></td></tr><tr><td id='variant.CollationMismatch'><code>CollationMismatch</code></td><td><div class='docblock'><p><code>42P21</code></p>
+</div></td></tr><tr><td id='variant.IndeterminateCollation'><code>IndeterminateCollation</code></td><td><div class='docblock'><p><code>42P22</code></p>
+</div></td></tr><tr><td id='variant.WrongObjectType'><code>WrongObjectType</code></td><td><div class='docblock'><p><code>42809</code></p>
+</div></td></tr><tr><td id='variant.UndefinedColumn'><code>UndefinedColumn</code></td><td><div class='docblock'><p><code>42703</code></p>
+</div></td></tr><tr><td id='variant.UndefinedFunction'><code>UndefinedFunction</code></td><td><div class='docblock'><p><code>42883</code></p>
+</div></td></tr><tr><td id='variant.UndefinedTable'><code>UndefinedTable</code></td><td><div class='docblock'><p><code>42P01</code></p>
+</div></td></tr><tr><td id='variant.UndefinedParameter'><code>UndefinedParameter</code></td><td><div class='docblock'><p><code>42P02</code></p>
+</div></td></tr><tr><td id='variant.UndefinedObject'><code>UndefinedObject</code></td><td><div class='docblock'><p><code>42704</code></p>
+</div></td></tr><tr><td id='variant.DuplicateColumn'><code>DuplicateColumn</code></td><td><div class='docblock'><p><code>42701</code></p>
+</div></td></tr><tr><td id='variant.DuplicateCursor'><code>DuplicateCursor</code></td><td><div class='docblock'><p><code>42P03</code></p>
+</div></td></tr><tr><td id='variant.DuplicateDatabase'><code>DuplicateDatabase</code></td><td><div class='docblock'><p><code>42P04</code></p>
+</div></td></tr><tr><td id='variant.DuplicateFunction'><code>DuplicateFunction</code></td><td><div class='docblock'><p><code>42723</code></p>
+</div></td></tr><tr><td id='variant.DuplicatePreparedStatement'><code>DuplicatePreparedStatement</code></td><td><div class='docblock'><p><code>42P05</code></p>
+</div></td></tr><tr><td id='variant.DuplicateSchema'><code>DuplicateSchema</code></td><td><div class='docblock'><p><code>42P06</code></p>
+</div></td></tr><tr><td id='variant.DuplicateTable'><code>DuplicateTable</code></td><td><div class='docblock'><p><code>42P07</code></p>
+</div></td></tr><tr><td id='variant.DuplicateAliaas'><code>DuplicateAliaas</code></td><td><div class='docblock'><p><code>42712</code></p>
+</div></td></tr><tr><td id='variant.DuplicateObject'><code>DuplicateObject</code></td><td><div class='docblock'><p><code>42710</code></p>
+</div></td></tr><tr><td id='variant.AmbiguousColumn'><code>AmbiguousColumn</code></td><td><div class='docblock'><p><code>42702</code></p>
+</div></td></tr><tr><td id='variant.AmbiguousFunction'><code>AmbiguousFunction</code></td><td><div class='docblock'><p><code>42725</code></p>
+</div></td></tr><tr><td id='variant.AmbiguousParameter'><code>AmbiguousParameter</code></td><td><div class='docblock'><p><code>42P08</code></p>
+</div></td></tr><tr><td id='variant.AmbiguousAlias'><code>AmbiguousAlias</code></td><td><div class='docblock'><p><code>42P09</code></p>
+</div></td></tr><tr><td id='variant.InvalidColumnReference'><code>InvalidColumnReference</code></td><td><div class='docblock'><p><code>42P10</code></p>
+</div></td></tr><tr><td id='variant.InvalidColumnDefinition'><code>InvalidColumnDefinition</code></td><td><div class='docblock'><p><code>42611</code></p>
+</div></td></tr><tr><td id='variant.InvalidCursorDefinition'><code>InvalidCursorDefinition</code></td><td><div class='docblock'><p><code>42P11</code></p>
+</div></td></tr><tr><td id='variant.InvalidDatabaseDefinition'><code>InvalidDatabaseDefinition</code></td><td><div class='docblock'><p><code>42P12</code></p>
+</div></td></tr><tr><td id='variant.InvalidFunctionDefinition'><code>InvalidFunctionDefinition</code></td><td><div class='docblock'><p><code>42P13</code></p>
+</div></td></tr><tr><td id='variant.InvalidPreparedStatementDefinition'><code>InvalidPreparedStatementDefinition</code></td><td><div class='docblock'><p><code>42P14</code></p>
+</div></td></tr><tr><td id='variant.InvalidSchemaDefinition'><code>InvalidSchemaDefinition</code></td><td><div class='docblock'><p><code>42P15</code></p>
+</div></td></tr><tr><td id='variant.InvalidTableDefinition'><code>InvalidTableDefinition</code></td><td><div class='docblock'><p><code>42P16</code></p>
+</div></td></tr><tr><td id='variant.InvalidObjectDefinition'><code>InvalidObjectDefinition</code></td><td><div class='docblock'><p><code>42P17</code></p>
+</div></td></tr><tr><td id='variant.WithCheckOptionViolation'><code>WithCheckOptionViolation</code></td><td><div class='docblock'><p><code>44000</code></p>
+</div></td></tr><tr><td id='variant.InsufficientResources'><code>InsufficientResources</code></td><td><div class='docblock'><p><code>53000</code></p>
+</div></td></tr><tr><td id='variant.DiskFull'><code>DiskFull</code></td><td><div class='docblock'><p><code>53100</code></p>
+</div></td></tr><tr><td id='variant.OutOfMemory'><code>OutOfMemory</code></td><td><div class='docblock'><p><code>53200</code></p>
+</div></td></tr><tr><td id='variant.TooManyConnections'><code>TooManyConnections</code></td><td><div class='docblock'><p><code>53300</code></p>
+</div></td></tr><tr><td id='variant.ConfigurationLimitExceeded'><code>ConfigurationLimitExceeded</code></td><td><div class='docblock'><p><code>53400</code></p>
+</div></td></tr><tr><td id='variant.ProgramLimitExceeded'><code>ProgramLimitExceeded</code></td><td><div class='docblock'><p><code>54000</code></p>
+</div></td></tr><tr><td id='variant.StatementTooComplex'><code>StatementTooComplex</code></td><td><div class='docblock'><p><code>54001</code></p>
+</div></td></tr><tr><td id='variant.TooManyColumns'><code>TooManyColumns</code></td><td><div class='docblock'><p><code>54011</code></p>
+</div></td></tr><tr><td id='variant.TooManyArguments'><code>TooManyArguments</code></td><td><div class='docblock'><p><code>54023</code></p>
+</div></td></tr><tr><td id='variant.ObjectNotInPrerequisiteState'><code>ObjectNotInPrerequisiteState</code></td><td><div class='docblock'><p><code>55000</code></p>
+</div></td></tr><tr><td id='variant.ObjectInUse'><code>ObjectInUse</code></td><td><div class='docblock'><p><code>55006</code></p>
+</div></td></tr><tr><td id='variant.CantChangeRuntimeParam'><code>CantChangeRuntimeParam</code></td><td><div class='docblock'><p><code>55P02</code></p>
+</div></td></tr><tr><td id='variant.LockNotAvailable'><code>LockNotAvailable</code></td><td><div class='docblock'><p><code>55P03</code></p>
+</div></td></tr><tr><td id='variant.OperatorIntervention'><code>OperatorIntervention</code></td><td><div class='docblock'><p><code>57000</code></p>
+</div></td></tr><tr><td id='variant.QueryCanceled'><code>QueryCanceled</code></td><td><div class='docblock'><p><code>57014</code></p>
+</div></td></tr><tr><td id='variant.AdminShutdown'><code>AdminShutdown</code></td><td><div class='docblock'><p><code>57P01</code></p>
+</div></td></tr><tr><td id='variant.CrashShutdown'><code>CrashShutdown</code></td><td><div class='docblock'><p><code>57P02</code></p>
+</div></td></tr><tr><td id='variant.CannotConnectNow'><code>CannotConnectNow</code></td><td><div class='docblock'><p><code>57P03</code></p>
+</div></td></tr><tr><td id='variant.DatabaseDropped'><code>DatabaseDropped</code></td><td><div class='docblock'><p><code>57P04</code></p>
+</div></td></tr><tr><td id='variant.SystemError'><code>SystemError</code></td><td><div class='docblock'><p><code>58000</code></p>
+</div></td></tr><tr><td id='variant.IoError'><code>IoError</code></td><td><div class='docblock'><p><code>58030</code></p>
+</div></td></tr><tr><td id='variant.UndefinedFile'><code>UndefinedFile</code></td><td><div class='docblock'><p><code>58P01</code></p>
+</div></td></tr><tr><td id='variant.DuplicateFile'><code>DuplicateFile</code></td><td><div class='docblock'><p><code>58P02</code></p>
+</div></td></tr><tr><td id='variant.ConfigFileError'><code>ConfigFileError</code></td><td><div class='docblock'><p><code>F0000</code></p>
+</div></td></tr><tr><td id='variant.LockFileExists'><code>LockFileExists</code></td><td><div class='docblock'><p><code>F0001</code></p>
+</div></td></tr><tr><td id='variant.FdwError'><code>FdwError</code></td><td><div class='docblock'><p><code>HV000</code></p>
+</div></td></tr><tr><td id='variant.FdwColumnNameNotFound'><code>FdwColumnNameNotFound</code></td><td><div class='docblock'><p><code>HV005</code></p>
+</div></td></tr><tr><td id='variant.FdwDynamicParameterValueNeeded'><code>FdwDynamicParameterValueNeeded</code></td><td><div class='docblock'><p><code>HV002</code></p>
+</div></td></tr><tr><td id='variant.FdwFunctionSequenceError'><code>FdwFunctionSequenceError</code></td><td><div class='docblock'><p><code>HV010</code></p>
+</div></td></tr><tr><td id='variant.FdwInconsistentDescriptorInformation'><code>FdwInconsistentDescriptorInformation</code></td><td><div class='docblock'><p><code>HV021</code></p>
+</div></td></tr><tr><td id='variant.FdwInvalidAttributeValue'><code>FdwInvalidAttributeValue</code></td><td><div class='docblock'><p><code>HV024</code></p>
+</div></td></tr><tr><td id='variant.FdwInvalidColumnName'><code>FdwInvalidColumnName</code></td><td><div class='docblock'><p><code>HV007</code></p>
+</div></td></tr><tr><td id='variant.FdwInvalidColumnNumber'><code>FdwInvalidColumnNumber</code></td><td><div class='docblock'><p><code>HV008</code></p>
+</div></td></tr><tr><td id='variant.FdwInvalidDataType'><code>FdwInvalidDataType</code></td><td><div class='docblock'><p><code>HV004</code></p>
+</div></td></tr><tr><td id='variant.FdwInvalidDataTypeDescriptors'><code>FdwInvalidDataTypeDescriptors</code></td><td><div class='docblock'><p><code>HV006</code></p>
+</div></td></tr><tr><td id='variant.FdwInvalidDescriptorFieldIdentifier'><code>FdwInvalidDescriptorFieldIdentifier</code></td><td><div class='docblock'><p><code>HV091</code></p>
+</div></td></tr><tr><td id='variant.FdwInvalidHandle'><code>FdwInvalidHandle</code></td><td><div class='docblock'><p><code>HV00B</code></p>
+</div></td></tr><tr><td id='variant.FdwInvalidOptionIndex'><code>FdwInvalidOptionIndex</code></td><td><div class='docblock'><p><code>HV00C</code></p>
+</div></td></tr><tr><td id='variant.FdwInvalidOptionName'><code>FdwInvalidOptionName</code></td><td><div class='docblock'><p><code>HV00D</code></p>
+</div></td></tr><tr><td id='variant.FdwInvalidStringLengthOrBufferLength'><code>FdwInvalidStringLengthOrBufferLength</code></td><td><div class='docblock'><p><code>HV090</code></p>
+</div></td></tr><tr><td id='variant.FdwInvalidStringFormat'><code>FdwInvalidStringFormat</code></td><td><div class='docblock'><p><code>HV00A</code></p>
+</div></td></tr><tr><td id='variant.FdwInvalidUseOfNullPointer'><code>FdwInvalidUseOfNullPointer</code></td><td><div class='docblock'><p><code>HV009</code></p>
+</div></td></tr><tr><td id='variant.FdwTooManyHandles'><code>FdwTooManyHandles</code></td><td><div class='docblock'><p><code>HV014</code></p>
+</div></td></tr><tr><td id='variant.FdwOutOfMemory'><code>FdwOutOfMemory</code></td><td><div class='docblock'><p><code>HV001</code></p>
+</div></td></tr><tr><td id='variant.FdwNoSchemas'><code>FdwNoSchemas</code></td><td><div class='docblock'><p><code>HV00P</code></p>
+</div></td></tr><tr><td id='variant.FdwOptionNameNotFound'><code>FdwOptionNameNotFound</code></td><td><div class='docblock'><p><code>HV00J</code></p>
+</div></td></tr><tr><td id='variant.FdwReplyHandle'><code>FdwReplyHandle</code></td><td><div class='docblock'><p><code>HV00K</code></p>
+</div></td></tr><tr><td id='variant.FdwSchemaNotFound'><code>FdwSchemaNotFound</code></td><td><div class='docblock'><p><code>HV00Q</code></p>
+</div></td></tr><tr><td id='variant.FdwTableNotFound'><code>FdwTableNotFound</code></td><td><div class='docblock'><p><code>HV00R</code></p>
+</div></td></tr><tr><td id='variant.FdwUnableToCreateExcecution'><code>FdwUnableToCreateExcecution</code></td><td><div class='docblock'><p><code>HV00L</code></p>
+</div></td></tr><tr><td id='variant.FdwUnableToCreateReply'><code>FdwUnableToCreateReply</code></td><td><div class='docblock'><p><code>HV00M</code></p>
+</div></td></tr><tr><td id='variant.FdwUnableToEstablishConnection'><code>FdwUnableToEstablishConnection</code></td><td><div class='docblock'><p><code>HV00N</code></p>
+</div></td></tr><tr><td id='variant.PlpgsqlError'><code>PlpgsqlError</code></td><td><div class='docblock'><p><code>P0000</code></p>
+</div></td></tr><tr><td id='variant.RaiseException'><code>RaiseException</code></td><td><div class='docblock'><p><code>P0001</code></p>
+</div></td></tr><tr><td id='variant.NoDataFound'><code>NoDataFound</code></td><td><div class='docblock'><p><code>P0002</code></p>
+</div></td></tr><tr><td id='variant.TooManyRows'><code>TooManyRows</code></td><td><div class='docblock'><p><code>P0003</code></p>
+</div></td></tr><tr><td id='variant.InternalError'><code>InternalError</code></td><td><div class='docblock'><p><code>XX000</code></p>
+</div></td></tr><tr><td id='variant.DataCorrupted'><code>DataCorrupted</code></td><td><div class='docblock'><p><code>XX001</code></p>
+</div></td></tr><tr><td id='variant.IndexCorrupted'><code>IndexCorrupted</code></td><td><div class='docblock'><p><code>XX002</code></p>
+</div></td></tr><tr><td id='variant.Unknown'><code>Unknown</code></td><td><div class='docblock'><p>An unknown code</p>
+</div></td></tr></table><h2 id='methods'>Methods</h2><h3 class='impl'><code>impl <a class='enum' href='../../postgres/error/enum.SqlState.html' title='postgres::error::SqlState'>SqlState</a></code></h3><div class='impl-items'><h4 id='method.from_code' class='method'><code>fn <a href='#method.from_code' class='fnname'>from_code</a>(s: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>) -&gt; <a class='enum' href='../../postgres/error/enum.SqlState.html' title='postgres::error::SqlState'>SqlState</a></code></h4>
+<div class='docblock'><p>Creates a <code>SqlState</code> from its error code.</p>
+</div><h4 id='method.code' class='method'><code>fn <a href='#method.code' class='fnname'>code</a>(&amp;self) -&gt; &amp;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a></code></h4>
+<div class='docblock'><p>Returns the error code corresponding to the <code>SqlState</code>.</p>
+</div></div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='enum' href='../../postgres/error/enum.SqlState.html' title='postgres::error::SqlState'>SqlState</a></code></h3><div class='impl-items'><h4 id='method.fmt' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#method.fmt' class='fnname'>fmt</a>(&amp;self, fmt: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
+</div><h3 id='derived_implementations'>Derived Implementations </h3><h3 class='impl'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html' title='core::clone::Clone'>Clone</a> for <a class='enum' href='../../postgres/error/enum.SqlState.html' title='postgres::error::SqlState'>SqlState</a></code></h3><div class='impl-items'><h4 id='method.clone' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone' class='fnname'>clone</a>(&amp;self) -&gt; <a class='enum' href='../../postgres/error/enum.SqlState.html' title='postgres::error::SqlState'>SqlState</a></code></h4>
+<h4 id='method.clone_from' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from' class='fnname'>clone_from</a>(&amp;mut self, source: &amp;Self)</code></h4>
+</div><h3 class='impl'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/cmp/trait.Eq.html' title='core::cmp::Eq'>Eq</a> for <a class='enum' href='../../postgres/error/enum.SqlState.html' title='postgres::error::SqlState'>SqlState</a></code></h3><div class='impl-items'></div><h3 class='impl'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html' title='core::cmp::PartialEq'>PartialEq</a> for <a class='enum' href='../../postgres/error/enum.SqlState.html' title='postgres::error::SqlState'>SqlState</a></code></h3><div class='impl-items'><h4 id='method.eq' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#method.eq' class='fnname'>eq</a>(&amp;self, __arg_0: &amp;<a class='enum' href='../../postgres/error/enum.SqlState.html' title='postgres::error::SqlState'>SqlState</a>) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
+<h4 id='method.ne' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#method.ne' class='fnname'>ne</a>(&amp;self, __arg_0: &amp;<a class='enum' href='../../postgres/error/enum.SqlState.html' title='postgres::error::SqlState'>SqlState</a>) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
+</div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "postgres";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

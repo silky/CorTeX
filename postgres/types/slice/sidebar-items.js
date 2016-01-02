@@ -1,0 +1,1 @@
+initSidebarItems({"struct":[["Slice","An adapter type mapping slices to Postgres arrays."]]});
